@@ -1,0 +1,117 @@
+/* 基本設定（リセットとフォント） */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 背景はシンプルで白 */
+    background-color: #ffffff;
+    /* 読みやすくモダンなシステムフォントを指定 */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    
+    /* 画面全体の中央に配置するためのFlexbox設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* スマホ閲覧時の余白 */
+}
+
+/* メインのコンテナ */
+.container {
+    text-align: center;
+    /* 余白をしっかりとる */
+    padding: 60px 40px;
+    /* わずかに背景色をつけてカードのように見せる */
+    background-color: #fafbfc;
+    border-radius: 12px;
+    /* 薄い影で浮き上がらせる */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* ヘッダー部分 */
+.header {
+    margin-bottom: 50px;
+}
+
+/* 提出者の表示 */
+.author {
+    /* 彩度の低いオレンジ系 */
+    color: #d48a6a;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+}
+
+/* タイトル */
+.title {
+    font-size: 2rem;
+    /* ダークで彩度の低いグリーン系で文字を引き締める */
+    color: #2c3e35;
+    line-height: 1.4;
+}
+
+/* ボタンエリア */
+.action-area {
+    margin-top: 30px;
+}
+
+/* メインボタン */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* 彩度の低いグリーン系 */
+    background-color: #6b8e78;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    /* ボタンに影をつけてクリックできることを直感的に */
+    box-shadow: 0 4px 15px rgba(107, 142, 120, 0.3);
+}
+
+.btn .icon {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+/* ホバー時のアクション（少し浮き上がり、色が濃くなる） */
+.btn:hover {
+    background-color: #597864;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(107, 142, 120, 0.4);
+}
+
+/* クリック時のアクション */
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(107, 142, 120, 0.3);
+}
+
+/* スマホ向けのレスポンシブ対応 */
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 20px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
